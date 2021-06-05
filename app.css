@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap);
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map-service {
+    font-size: 14px;
+    height: 500px;
+    font-family: Comfortaa, Arial, Helvetica, sans-serif
+}
+
+/*map*/
+
+#calc-emission-container {
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+}
+
+#carbon-emission-output {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 800px) {
+    #calc-emission-container {
+        flex-direction: column;
+        height: 560px;
+    }
+
+    #map-service {
+        height: 800px;
+    }
+
+    #carbon-emission-output {
+        flex-direction: column;
+    }
+}
+
+#form-div {
+    flex: 60%;
+    max-height: 365px;
+}
+
+#googleMap {
+    flex: 40%;
+    /* width: 90%; */
+    height: 300px;
+    margin: 10px 20px auto;
+}
+
+#calc-emission-heading {
+    height: 50px;
+    padding: 25px 0 10px 0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    align-items: center;
+}
+
+#calc-emission-form {
+    text-align: center;
+}
+
+#calc-emission {
+    color: #333333 !important;
+    background-color: #fff;
+    border-color: #ccc !important;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 8px;
+    border: 1px solid;
+    border-width: 1px 1px 1px 1px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+    text-transform: uppercase;
+}
+
+.loc-dropdown-container {
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 18px;
+}
+
+.loc-dropdown {
+    display: inline-block;
+    font-size: 14px;
+    padding: 7px 12px;
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    transition: all .3s ease;
+}
+
+.carbon-emission-heading {
+    text-align: center;
+    font-size: 20px;
+}
+
+.carbon-emission-result {
+    text-align: center;
+    font-size: 35px;
+    color: green;
+    margin: 0;
+}
+
+.distance-covered {
+    display: none;
+}
+
+.result-div {
+    flex: 25%;
+    padding: 15px;
+}

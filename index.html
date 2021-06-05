@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Distances btn two cities App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="stylesheet" href="app.css" />
+</head>
+
+<body>
+    <div id="map-service">
+        <div>
+            <div id="calc-emission-heading">Calculate your Carbon Emissions</div>
+            <hr><br>
+            <div id="calc-emission-container">
+                <div id="form-div">
+                    <form id="calc-emission-form">
+                        <div class="loc-dropdown-container">
+                            <label class="loc-label">Select Aircraft Type:</label>
+                            <div>
+                                <select class="loc-dropdown" name="aircraft" id="inputAircraft" required=""
+                                    autocomplete="off">
+                                    <option value="0">Aircraft Type</option>
+                                    <optgroup label="Very Light Jets">
+                                        <option value="492.1">Cessna Citation M2</option>
+                                        <option value="454.61">Embraer Phenom 100EV</option>
+                                        <option value="339">HondaJet HA-420</option>
+                                    </optgroup>
+                                    <optgroup label="Light Jets">
+                                        <option value="1086.5">Bombardier Learjet 75</option>
+                                        <option value="563.72">Cessna Citation CJ3+</option>
+                                        <option value="855">Cessna Citation CJ4</option>
+                                        <option value="754.65">Embraer Phenom 300E</option>
+                                        <option value="658.77">Nextant 400XTi</option>
+                                    </optgroup>
+                                    <optgroup label="Mid-Size Jets">
+                                        <option value="1122.88">Cessna Citation Latitude</option>
+                                        <option value="1122.9">Cessna Citation Sovereign+</option>
+                                        <option value="1118.34">Cessna Citation XLS+</option>
+                                        <option value="1172.89">Embraer Legacy 500</option>
+                                        <option value="563.715">Pilatus PC-24</option>
+                                    </optgroup>
+                                    <optgroup label="Large Jets">
+                                        <option value="1209.26">Bombardier Challenger 300</option>
+                                        <option value="1350.19">Bombardier Challenger 350</option>
+                                        <option value="1627.5">Bombardier Challenger 650</option>
+                                        <option value="2536.72">Bombardier Global 5000</option>
+                                        <option value="2327.6">Bombardier Global 6000</option>
+                                        <option value="2086.66">Bombardier Global 7500</option>
+                                        <option value="2209.4">Bombardier Global Express</option>
+                                        <option value="1209.26">Cessna Citation Longitude</option>
+                                        <option value="1286.54">Dassault Falcon 2000LXS</option>
+                                        <option value="1286.54">Dassault Falcon 2000S</option>
+                                        <option value="1445.66">Dassault Falcon 7X</option>
+                                        <option value="1575.2">Dassault Falcon 8X</option>
+                                        <option value="1181.98">Dassault Falcon 900LX</option>
+                                        <option value="1418.38">Embraer Legacy 650E</option>
+                                        <option value="2845.85">Embraer Lineage 1000E</option>
+                                        <option value="1291.09">Gulfstream G280</option>
+                                        <option value="1604.77">Gulfstream G500</option>
+                                        <option value="3054.97">Gulfstream G550</option>
+                                        <option value="1604.77">Gulfstream G600</option>
+                                        <option value="2058.0149">Gulfstream G650</option>
+                                        <option value="2058.0149">Gulfstream G650ER</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="loc-dropdown-container">
+                            <label class="loc-label">Select Source:</label>
+                            <div>
+                                <input class="loc-dropdown" type="text" id="from" placeholder="Origin">
+                            </div>
+                        </div>
+                        <div class="loc-dropdown-container">
+                            <label class="loc-label">Select Destination:</label>
+                            <div>
+                                <input class="loc-dropdown" type="text" id="to" placeholder="Destination">
+                            </div>
+                        </div> <br><br>
+                        <button type="button" id="calc-emission" onclick="calcRoute();">CALCULATE</button><br><br><br>
+                        <div class="loc-dropdown-container">
+                            <span id="distance-covered"></span>
+                        </div> <br><br>
+                    </form>
+                </div>
+
+                <div id="googleMap">
+
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div id="carbon-emission-output">
+                <div class="result-div">
+                    <h3 class="carbon-emission-heading">Total flight time:</h3>
+                    <p class="carbon-emission-result"><b><span id="flight-time">0.00 hrs</span></b></p>
+                </div>
+                <div class="result-div">
+                    <h3 class="carbon-emission-heading">Total charter cost:</h3>
+                    <p class="carbon-emission-result"><b><span id="charter-cost">$ 0.00</span></b></p>
+                </div>
+                <div class="result-div">
+                    <h3 class="carbon-emission-heading">Total ownership cost:</h3>
+                    <p class="carbon-emission-result"><b><span id="ownership-cost">$ 0.00</span></b></p>
+                </div>
+                <div class="result-div">
+                    <h3 class="carbon-emission-heading">Total fuel burn:</h3>
+                    <p class="carbon-emission-result"><b><span id="fuel-burn">0.00</span></b></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs8jhj8CRFAEPTi4RjP9RIYizo7sST1oo&libraries=places"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="app.js"></script>
+</body>
+
+</html>
